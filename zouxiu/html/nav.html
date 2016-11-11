@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <script src="../js/zepto.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/swiper.js"></script>
+</head>
+<body>
+  <div id="box2">
+     <header><img src="../img/1.png" class="ims"></header>
+     <section>
+         <div class="swiper-container">
+             <div class="swiper-wrapper">
+                 <div class="swiper-slide dvat block"><p><img src="../img/nav-1.png"></p>
+                     <p >多联系 ，不孤单</p>
+                     <p><span class="sap">走秀</span>与<span>你相伴</span></p></div>
+                 <div class="swiper-slide dvat1 dvat">
+                     <p class="ppt"><img src="../img/nav-2.png"></p>
+                     <p><span>加入购物袋</span></p>
+                     <p><img src="../img/nav-3.png"></p>
+                     <p><img src="../img/nav-4.png"></p>
+                 </div>
+                 <div class="swiper-slide dvat2 dvat">
+                     <img src="../img/nav-5.png">
+                 </div>
+                 <div class="swiper-slide dvat2 dvat">
+                     <img src="../img/nav-6.png">
+                     <button>开始体验</button>
+                 </div>
+             </div>
+             <!-- 如果需要分页器 -->
+             <div class="swiper-pagination pdat"></div>
+         </div>
+     </section>
+     </div>
+  <script>
+              $(".dvat2 button")[0].addEventListener("touchstart",function(){
+                  window.location.assign("index2.html");
+              },false);
+              var mySwiper = new Swiper ('.swiper-container', {
+                  //如果需要循环
+                  /*loop: true,*/
+                  // 如果需要分页器
+                  pagination: '.swiper-pagination',
+                  keyboardControl: true,
+                  /* autoplay:1500,*/
+                  autoplayDisableOnInteraction: false,
+
+              })
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走秀更多</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/index2.css">
+    <script src="../js/zepto.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+   <div id="box">
+       <div class="imgas"><img src="../img/1.png" class=""></div>
+       <header class="nav"><img src="../img/jt.png" class="images">更多</header>
+       <section class="main">
+           <div class="d4 d3 app">
+               <div class="ds2">
+                   <p><em>常见问题</em><span><img src="../img/fen-2.png"></span></p>
+                   <p><em>系统设置</em><span><img src="../img/fen-2.png"></span></p>
+                   <p><em>软件更新</em><span><img src="../img/fen-2.png"></span></p>
+                   <p><em>扫描二维码</em><span><img src="../img/fen-2.png"></span></p>
+               </div>
+               <div class="ds2 dt">
+                   <p><em>我要提意见</em><span><img src="../img/fen-2.png"></span></p>
+                   <p><em>关于</em><span><img src="../img/fen-2.png"></span></p>
+               </div>
+               <button class="pute" value="退出登录">退出登录</button>
+           </div>
+       </section>
+      <footer class="footer">
+          <div class="dp"><p class="iconfont">&#xe604;</p><p>首页</p></div>
+          <div class="dp1"><p class="iconfont">&#xe607;</p><p>分类</p></div>
+          <div class="dp2"><p class="iconfont">&#xe611;</p><p>购物车</p></div>
+          <div class="dp3"><p class="iconfont">&#xe65d;</p><p>我的秀</p></div>
+          <div class="dp4 dvt1 "><p class="iconfont">&#xf0013;</p><p>更多</p></div>
+      </footer>
+   </div>
+
+   <script>
+
+       $(".pute").on("singleTap",function(){
+           $(".pt span").html("未知");
+           $(".but1").val("登录").css({width:".5rem"});
+           $(".but2").css({display:"block"});
+           localStorage.removeItem("idcar");
+           localStorage.removeItem("flag");
+           window.location.assign("index5.html");
+
+       })
+
+   </script>
+</body>
+</html>

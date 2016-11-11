@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走秀-我的优惠券</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/index2.css">
+    <script src="../js/zepto.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+<div id="box">
+    <div class="imgas"><img src="../img/1.png" class=""></div>
+    <header class="nav">
+        <img src="../img/jt.png" class="images">
+        <span>我的优惠券</span>
+    </header>
+    <section class="main">
+            <div class="pices">
+                <ul class="pice-list">
+                    <li class="li1 active">未使用</li>
+                    <li>已使用</li>
+                    <li>已过期</li>
+                    <li class="li4">未激活</li>
+                </ul>
+                <div class="pice-pe">
+                    <div class="dta2">
+                        <p>40元现金劵(满299元可用)</p>
+                        <p>号码：<span>DASHDAJSDHASJKHDAKDH</span></p>
+                        <p>过期时间：<span>2016年12月21号</span></p>
+                        <p>状态：<span>未使用</span></p>
+                    </div>
+                    <div class="dta1">无</div>
+                    <div class="dta1">无</div>
+                    <div class="dta1">无</div>
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="dp"><p class="iconfont">&#xe604;</p><p>首页</p></div>
+        <div class="dp1"><p class="iconfont">&#xe607;</p><p>分类</p></div>
+        <div class="dp2 "><p class="iconfont">&#xe611;</p><p>购物车</p></div>
+        <div class="dp3 dvt1"><p class="iconfont">&#xe65d;</p><p>我的秀</p></div>
+        <div class="dp4"><p class="iconfont">&#xf0013;</p><p>更多</p></div>
+    </footer>
+</div>
+   <script>
+              var
+                   oListP= $(".pice-list li"),
+                   oPicePe= $(".pice-pe div");
+              oListP.on("singleTap",function(){
+                  var iIndex= $(this).index();
+                  console.log( iIndex);
+                  oListP.removeClass("active").eq(iIndex).addClass("active");
+                  oPicePe.removeClass("dta2").eq(iIndex).addClass("dta2");
+              })
+
+   </script>
+</body>
+</html>

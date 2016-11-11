@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走秀商品详情</title>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/index2.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <script src="../js/zepto.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/iscroll.js"></script>
+</head>
+<body>
+   <div id="box">
+       <div class="imgas"><img src="../img/1.png" class=""></div>
+       <header class="nav">
+           <img src="../img/jt.png" class="images">
+           <span>商品介绍</span>
+           <button class="buy">分享</button>
+       </header>
+       <nav class="npt ptan">
+           <p>距离结束时间：<em>4</em>天<span>5</span>时<i>15</i>分<strong>47</strong>秒</p>
+       </nav>
+       <section class="main">
+            <div class="mvp ptp mtp">
+               <div><img src="../img/sq.png"></div>
+               <div>
+                  <span>￥259</span><em>灰色印花短袖T恤</em>
+               </div>
+               <div>
+                  市场价：<em>￥439</em><span>4.8折</span><i>125人购买</i>
+               </div>
+            </div>
+       </section>
+      <footer class="footer foot">
+          <div class="dvt2 dtpa">介绍</div>
+          <div class="dvt3 dtpa">详情</div>
+          <div class="dtpa">实拍</div>
+      </footer>
+   </div>
+   <script>
+       var mySwiper = new Swiper('.swiper-container', {
+           //如果需要循环
+           /*loop: true,*/
+           // 如果需要分页器
+           pagination: '.swiper-pagination',
+           keyboardControl: true,
+           /*autoplay: 1500,*/
+           autoplayDisableOnInteraction: false,
+
+       })
+       var
+          oDtpa= $(".foot .dtpa");
+       oDtpa.on("singleTap",function(){
+           var iIdenx= $(this).index();
+           if(iIdenx==0){
+               window.location.assign("sangpin.html");
+           }
+           if(iIdenx==1){
+               window.location.assign("sangpin1.html");
+           }
+           if(iIdenx==2){
+               window.location.assign("sangpin2.html");
+           }
+       })
+       var
+               oSpanOne   = $(".ptan p em"),
+               oSpanTwo   = $(".ptan p span"),
+               oSpanThree = $(".ptan p i"),
+               oSpanFour  = $(".ptan p strong"),
+               oTime      = null,
+               day        = 4,
+               hour       = 5,
+               minute     = 15,
+               second     = 47;
+
+       oTime = setInterval(function () {
+           second--;
+           if(second == 0){
+               second = 59;
+               minute--;
+               if(minute == 0){
+                   minute = 59;
+                   hour--;
+                   if(hour == 0){
+                       hour == 23;
+                       day--;
+                       if(day == 0){
+                           clearInterval(oTime);
+                       }
+                   }
+               }
+           }
+           oSpanOne.html(day);
+           oSpanTwo.html(hour);
+           oSpanThree.html(minute);
+           oSpanFour.html(second);
+       },1000)
+        $(".buy").on("singleTap",function(){
+            window.location.assign("index2.html");
+        })
+   </script>
+</body>
+</html>
